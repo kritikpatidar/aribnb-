@@ -1,0 +1,36 @@
+<% layout("/layouts/boil") %>
+<div class="row mt-4">
+    <h1 class="col-6 offset-3">Login </h1>
+    <div class="col-6 offset-3" >
+        <form action="/login" method="POST" class="needs-validation" novalidate>
+
+            <div class="mb-3">
+                <label for="username" class="from-label">USERNAME</label>
+                <input
+                  type="text"
+                  name="username"
+                    id="username"
+                  class="form-control"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please Enter the Correct username .</div>
+              </div>
+
+                   
+              <div class="mb-3">
+                <label for="password" class="from-label">PASSWORD</label>
+                <input
+                  type="password"
+                  name="password"
+                    id="password"
+                  class="form-control"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please Enter the Correct password .</div>
+              </div>
+              <button class="btn btn-dark new-btn mt-3">lOGIN</button>
+        </form>
+    </div>
+</div>
