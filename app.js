@@ -1,4 +1,6 @@
-require("dotenv").config();
+if (process.env.NODE_ENV != "production") {
+  require("dotenv").config();
+}
 
 const express = require("express");
 const app = express();
@@ -9,9 +11,9 @@ const methodOverride = require("method-override");
 const ejsMate = require("@simonsmith/ejs-mate");
 // const { url } = require("inspector");
 // const ExpressError = require("./utility/expressError.js");
-const routerListings = require("../MAJORPROJECT/router/listing.js");
-const routerReviews = require("../MAJORPROJECT/router/review.js");
-const routerUser = require("../MAJORPROJECT/router/user.js");
+const routerListings = require("./router/listing.js");
+const routerReviews = require("./router/review.js");
+const routerUser = require("./router/user.js");
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
